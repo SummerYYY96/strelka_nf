@@ -10,7 +10,7 @@ params.ref_dict = "${params.ref_dir}/iGenomes/Homo_sapiens/UCSC/hg19/Sequence/Wh
 // params.germline_resource_gz_tbi = "${params.gatk_bundle_dir}/af-only-gnomad.raw.sites.hg19.vcf.gz.tbi"
 
 params.samplesheet = "sample.pairs.tsv"
-params.outputdir = "output"
+params.outputDir = "output"
 
 // Set up input data channels for targets, ref and germline vcf files
 Channel.fromPath( file(params.targetbed) ).into { targets_bed; targets_bed2 }
@@ -106,6 +106,7 @@ process manta {
     echo "Reference Dict: ${ref_dict}"
     echo "Targets BGZ: ${targets_bgz}"
     echo "Targets TBI: ${targets_tbi}"
+    echo "Output directory is: ${params.outputDir}"
 
     configManta.py \
     --normalBam "${normalBam}" \
