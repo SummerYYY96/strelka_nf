@@ -8,3 +8,4 @@ The script then run nextflow processes by running the following on command line.
 make update # install nextflow under current directory
 make submit # job submission to slurm
 ```
+ 
