@@ -3,9 +3,7 @@ process TARGETS_ZIP {
     file targets_bed
 
     output:
-    tuple(
-        file("targets.bed.bgz"), file("targets.bed.bgz.tbi")
-    )
+    tuple file("targets.bed.bgz"), file("targets.bed.bgz.tbi"), emit: zipped_targets
 
     script:
     """
