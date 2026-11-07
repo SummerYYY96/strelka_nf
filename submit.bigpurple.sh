@@ -10,4 +10,4 @@
 #SBATCH --export=HOSTNAME
 
 module load singularity/3.9.8
-./nextflow run main.nf
+./nextflow run main_dsl2.nf
